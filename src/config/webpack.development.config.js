@@ -41,7 +41,9 @@ const config = {
   },
   mode: 'development',
   output: {
-    filename: 'application.js'
+    path: path.resolve('public'),
+    filename: 'application.js',
+    publicPath: '/'
   },
   plugins: [
     new ScriptPlugin(),

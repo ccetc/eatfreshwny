@@ -148,8 +148,8 @@ const createDistribution = async (name) => {
           name,
           `www.${name}`
         ]
-      }
-
+      },
+      DefaultRootObject: 'index.html'
     }
   }
 
