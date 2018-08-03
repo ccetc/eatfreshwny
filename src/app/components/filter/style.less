@@ -1,0 +1,78 @@
+.filter {
+  flex: 1;
+  position: relative;
+  overflow:hidden;
+}
+.filter-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @white;
+  display: flex;
+  flex-direction: column;
+}
+.filter-header {
+  border-bottom: 1px solid fadeout(@black, 90);
+  background-color: fadeout(@black, 95);
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+}
+.filter-header-icon {
+  flex: 0 0 3em;
+  display: flex;
+  i {
+    margin: auto;
+  }
+}
+.filter-header-title {
+  flex: 1;
+  padding: 1em 0;
+}
+.filter-body {
+  flex: 1;
+  .scrollable();
+}
+.filter-footer {
+  border-top: 1px solid fadeout(@black, 90);
+  background-color: fadeout(@black, 95);
+  text-align: center;
+  padding: 1em;
+  cursor: pointer;
+}
+.filter-item {
+  border-bottom: 1px solid fadeout(@black, 90);
+  display: flex;
+  padding: 0.5em;
+  line-height: 1.57em;
+  cursor: pointer;
+  &:hover {
+    background-color: fadeout(@black, 98);
+  }
+}
+.filter-item-content {
+  flex: 1;
+  display: flex;
+}
+.filter-item-title {
+  flex: 1;
+  padding: 0.5em;
+}
+.filter-item-icon {
+  flex: 0 0 2em;
+  display: flex;
+  .fa {
+    margin: auto;
+  }
+  .fa-chevron-right {
+    color: lighten(@black, 90);
+  }
+  .fa-check {
+    color: @green;
+  }
+  .fa-times {
+    color: @red;
+  }
+}

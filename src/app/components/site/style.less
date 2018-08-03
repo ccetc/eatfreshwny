@@ -1,0 +1,142 @@
+.site {
+  flex: 1;
+  display: flex;
+  position: relative;
+  &.navigating {
+    .menu-canvas {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      opacity: 0.4;
+    }
+    .menu {
+      .translateX(0);
+    }
+  }
+}
+.site-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.5em;
+  height: 3.5em;
+  display: flex;
+  background-color: @black;
+  z-index: 1;
+}
+.site-sidebar-spacer {
+  flex: 1;
+}
+.site-sidebar-icon {
+  .hover(background-color, fadeout(@black, 90));
+  flex: 0 0 3.5em;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  i {
+    margin: auto;
+    color: @white;
+    width: 1.1em;
+    font-size: 1.3em;
+    line-height: 1em;
+  }
+}
+.site-sidebar-icon-label {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 0.5em;
+  font-weight: bold;
+  line-height: 2.2em;
+  padding: 0;
+  background-color: @red;
+  color: @white;
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  vertical-align: middle;
+  .border-radius(50%);
+}
+
+.site-main {
+  flex: 1;
+  background-color: @white;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-canvas {
+  .transition(opacity .25s cubic-bezier(0.7, 0, 0.175, 1) 0s);
+  background-color: @black;
+  opacity: 0;
+}
+
+.menu {
+  .scrollable();
+  z-index: 2;
+  .transition(transform .25s cubic-bezier(0.7, 0, 0.175, 1) 0s);
+  .translateX(-100%);
+  position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: @black;
+	max-width: 350px;
+	width: ~"calc(100% - 2em)";
+}
+.menu-header {
+	padding: 1em;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+.menu-body {
+	padding: 0 1em;
+}
+.menu-image {
+	background-size: cover;
+	background-repeat: none;
+	position: relative;
+	height: 300px;
+	.menu-image-logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+ 	  transform: translate(-50%, -50%);
+		background-color: fadeout(@white, 10);
+		width: 80%;
+		max-width: 200px;
+		border-radius: 10px;
+    padding: 10px;
+	}
+	img {
+		width: 100%;
+	}
+}
+.menu-header-detail {
+	background-color: @white;
+	padding: 1em;
+	h3 {
+		margin: 0 !important;
+    span {
+  		color: #9E1E63;
+    }
+	}
+	p {
+		font-size: 0.9em;
+		margin: 0 !important;
+	}
+}
+.menu-item {
+  margin-bottom: 0.8em;
+}
+.menu-footer {
+	padding: 1em;
+	p {
+		color: @white;
+	}
+}

@@ -1,0 +1,7 @@
+export const FETCH_REQUEST = 'FETCH_REQUEST'
+export const FETCH_SUCCESS = 'FETCH_SUCCESS'
+export const FETCH_FAILURE = 'FETCH_FAILURE'
+export const SET_FILTER = 'SET_FILTER'
+export const SET_RECORDS = 'SET_RECORDS'
+export const SET_QUERY = 'SET_QUERY'
+export const TOGGLE_FILTER = 'TOGGLE_FILTER'

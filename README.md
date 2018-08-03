@@ -1,2 +1,2 @@
-# eatfreshwny
-Eat Fresh WNY
+# static-starter
+Static Site Starter

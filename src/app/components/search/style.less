@@ -1,0 +1,40 @@
+.search {
+  flex: 1;
+  line-height: 1em;
+  display: flex;
+  overflow: hidden;
+  &.active .search-icon {
+    margin-left: -2em;
+  }
+}
+.search-icon {
+  .transition(margin .1s cubic-bezier(0.7, 0, 0.175, 1) 0s);
+  padding: 0.8em 0 0.8em 1em;
+  font-size: 1.25em;
+  line-height: 1em;
+  color: fadeout(@black, 90);
+  overflow: hidden;
+}
+.remove-icon {
+  padding: 0.8em 0 0.8em 1em;
+  font-size: 1.25em;
+  line-height: 1em;
+  color: fadeout(@black, 90);
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    color: fadeout(@black, 70);
+  }
+}
+.search-field {
+  flex: 1;
+  input {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0.9em;
+    width: 100%;
+    outline: none;
+    font-size: 1em;
+  }
+}
