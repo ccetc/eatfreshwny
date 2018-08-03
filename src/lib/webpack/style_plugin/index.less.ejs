@@ -1,3 +1,4 @@
+@import '<%= root %>/node_modules/reframe/src/style.less';
 <% for(var i = 0; i < styles.length; i++) {-%>
-@import '<%= styles[i] %>';
+@import '<%= root %>/<%= styles[i] %>';
 <% } -%>

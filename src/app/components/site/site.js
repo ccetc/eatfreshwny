@@ -23,9 +23,9 @@ class Site extends React.Component {
         <div className="menu-canvas" onClick={ this._handleClick.bind(this) } />
         <div className="menu">
           <div className="menu-header">
-            <div className="menu-image" style={{ backgroundImage: 'url(/eatfresh/images/kale.jpg)' }}>
+            <div className="menu-image" style={{ backgroundImage: 'url(/images/kale.jpg)' }}>
               <div className="menu-image-logo">
-                <img src="https://a-cdn.mahaplatform.com/images/logo.png" />
+                <img src="/images/logo.png" />
               </div>
             </div>
             <div className="menu-header-detail">

@@ -1,11 +1,11 @@
-import * as reframe from 'reframe'
+import reframe from 'reframe'
 <% for(var i = 0; i < components.length; i++) {-%>
 import <%= components[i] %> from '<%= root %>/src/app/components/<%= components[i] %>'
 <% } -%>
 import index from '<%= root %>/src/app'
 
 const reducers = [
-  ...reframe,
+  ...Object.values(reframe),
 <% for(var i = 0; i < components.length; i++) {-%>
   <%= components[i] %>,
 <% } -%>

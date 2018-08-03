@@ -17,9 +17,9 @@ class Home extends React.Component {
       <div className="page">
         <div className="page-body">
           <div className="home">
-            <div className="home-image" style={{ backgroundImage: 'url(https://a-cdn.mahaplatform.com/eatfresh/images/kale.jpg)' }}>
+            <div className="home-image" style={{ backgroundImage: 'url(/images/kale.jpg)' }}>
               <div className="home-image-logo">
-                <img src="https://a-cdn.mahaplatform.com/eatfresh/images/logo.png" />
+                <img src="/images/logo.png" />
               </div>
             </div>
             <div className="home-content">

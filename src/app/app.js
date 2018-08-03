@@ -8,7 +8,9 @@ import { createLogger } from 'redux-logger'
 import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux'
 import { hot } from 'react-hot-loader'
+import Site from './components/site'
 import PropTypes from 'prop-types'
+import { Modal } from 'reframe'
 import React from 'react'
 
 import Categories from './pages/categories'
@@ -35,7 +37,11 @@ class App extends React.Component {
     return (
       <Provider store={ this.store }>
         <Router>
-          <RouterStack { ...this._getStack() } />
+          <Modal>
+            <Site>
+              <RouterStack { ...this._getStack() }  />
+            </Site>
+          </Modal>
         </Router>
       </Provider>
     )

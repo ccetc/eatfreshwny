@@ -4,7 +4,7 @@ export const INITIAL_STATE = {
   all: null,
   filtering: false,
   filter: null,
-  q: {},
+  q: '',
   records: [],
   status: 'pending',
   total: null

@@ -13,7 +13,7 @@ class Categories extends React.Component {
 
   render() {
     const { categories } = this.props
-    const host = process.env.DATA_ASSET_CDN_HOST || ''
+    const host = 'https://a-cdn.mahaplatform.com'
     return (
       <div className="grid">
         { categories.map((category, index) => (

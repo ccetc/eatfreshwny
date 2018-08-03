@@ -15,15 +15,13 @@ class StylePlugin {
 
       if(file && !file.match(/^.*\.less/)) return
 
-      const styles = glob.sync('src/app/**/style.less').map(style => {
+      const styles = glob.sync('src/app/**/style.less')
 
-        return path.resolve(style)
-
-      })
+      const root = path.resolve()
 
       const template = fs.readFileSync(path.join(__dirname, 'index.less.ejs'), 'utf8')
 
-      const data = ejs.render(template, { styles })
+      const data = ejs.render(template, { root, styles })
 
       fs.writeFileSync(stylePath, data, 'utf8')
 
