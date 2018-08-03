@@ -145,7 +145,8 @@ const createDistribution = async (name) => {
       Aliases: {
         Quantity: 1,
         Items: [
-          name
+          name,
+          `www.${name}`
         ]
       }
 

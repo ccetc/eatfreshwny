@@ -14,8 +14,6 @@ const compile = () => new Promise((resolve, reject) => {
 
     if(err) reject(err)
 
-    console.log(stats)
-
     resolve(stats)
 
   })
